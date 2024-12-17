@@ -1,0 +1,350 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* General Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0000FF;
+    color: white;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: blue;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: white;
+    background-color: #007bff;
+    border-radius: 4px;
+    padding: 10px 15px;
+}
+
+.get-started {
+    background-color: green;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    background-color: white;
+    height: 3px;
+    width: 25px;
+    margin: 4px 0;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background-color: blue;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+    /* Show "Data Privacy" and "Terms" only in small screens */
+    .hide-on-desktop {
+        display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    /* Hide "Data Privacy" and "Terms" on desktop */
+    .hide-on-desktop {
+        display: none;
+    }
+}
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 80px 40px;
+    background-color:#2569f0;
+}
+
+.hero-content {
+    max-width: 500px;
+    margin-right: 170px; /* Right margin */
+    margin-left: 50px;  /* Left margin */
+    text-align: left;
+}
+
+.hero-content h1{
+    font-size: 3.5rem;
+    color: #ebebeb;
+    justify-content: left;
+}
+
+.hero-content p {
+    margin: 10px 0;
+    font-size: 1.7rem;
+    color: #fffcfc;
+    justify-content: left;
+}
+
+.buttons{
+    margin-top: 20px;
+    justify-content: left;
+}
+
+.btn {
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-right: 10px;
+    display: inline-block;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect to highlight the link */
+.btn:hover {
+    color: #ffffff; /* Text color when hovered */
+    background-color: #007bff; /* Background color when hovered */
+    border-radius: 4px; /* Optional: Adds rounded corners to the background */
+    padding: 10px 15px; /* Slightly adjust padding for effect */
+}
+
+.join-now {
+    background-color: #28a745;
+    color: rgb(255, 255, 255);
+}
+
+.learn-more1 {
+    background-color: white;
+    color: #0c0c0c;
+}
+
+.hero-image2{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    max-width: 425px;
+    padding: 30px 10px;
+    width: 98%;
+}
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .hero {
+            flex-direction:column;
+        }
+    
+        .hero-content {
+            margin: 0 0 20px 0;
+            margin-left: 20px;
+        }
+
+        .hero-image2 {
+            max-width: 100%;
+            margin-right: 20px;
+        }
+    }    
+
+/* Video Container Styling */
+.video-container {
+    position: relative;
+    width: 100%; /* Full width */
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Ensures no empty spaces or scrollbars */
+    margin: 0; /* Removes default margins if any */
+    padding: 0; /* Removes default padding if any */
+}
+
+/* Background Video Styling */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Stretches the video to cover the full width */
+    height: 100%; /* Stretches the video to cover the full height */
+    object-fit: cover; /* Ensures the video fills the area without leaving gaps or distortion */
+}
+
+
+.background-section {
+    background-image: url(backgroundbanking.png);
+    align-items: center;
+    background-size: cover;
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .background-section {
+        width: 100%;
+    }
+}
+
+.about-section h2, .services-section h2 {
+    background: #0d47a1;
+    color: #fff;
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 10px;
+    z-index: 2;
+    text-align: center;
+    align-items: center;
+}
+
+.about-card {
+    text-align: center;
+    align-items: center;
+    background-color: #e3f2fd;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    padding: 10px 15px;
+}
+
+.services-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    z-index: 2;
+}
+
+.card p {
+    font-size: 1.4rem;
+}
+.card {
+    position: relative;
+    background-color: #e3f2fd;
+    padding: 50px 25px;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+    z-index: 2;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth animation */
+}
+
+/* Hover effect for the bump */
+.card:hover {
+    transform: translateY(-10px); /* Move upward */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.card h3 {
+    color: #0d47a1;
+    z-index: 2;
+}
+.apply-now {
+    background-color: #71d574;
+    color: white;
+    margin-top: 10px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.learn-more{
+    background-color: white;
+    color: rgb(8, 255, 8);
+    margin-top: 10px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background-color: #dee2df;
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .terms-section {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+.terms-section {
+    background-color:#1409f0;
+    color: #fff;
+    font-size: 1rem;
+    text-align: right;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: blue;
+    color: #fff;
+    padding: 20px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.footer-logo {
+    height: 60px;
+    margin-right: 10px;
+}
+.footer-links a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    text-align: center;
+}
